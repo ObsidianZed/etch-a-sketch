@@ -10,20 +10,13 @@ html {
     background-color: darkslategray;
 }
 
-
-#container {
-    min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#gridButton {
+    margin-top: 10vh;
+    height: 80px;
+    width: 160px;
 }
 
-
 #gridMap {
-    min-width: 400px;
-    max-width: 400px;
-    min-height: 400px;
-    max-height: 400px;
     display: flex;
     flex-flow: column nowrap;
     flex: 1 0 auto;
@@ -37,3 +30,20 @@ html {
     justify-content: center;
     align-items: center;
 }
+
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10vh;
+}
+/*
+#container {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
