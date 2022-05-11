@@ -43,10 +43,7 @@ function drawGrid() {
             if(blackValue>0) {
                 blackValue -= 2;
             }
-            console.log(blackValue);
-            
-            // for (let b=0; b>0; (b-10)) {}
-
+            // console.log(blackValue);
 
             this.style.backgroundColor = fillColor;
         });
@@ -57,14 +54,18 @@ function drawGrid() {
 function userGrid() {
     gridSize = prompt('How many squares should the rows and columns consist of?');
     gridSize = +gridSize;
-    if (gridSize < 1 || gridSize > 100 || typeof(gridSize) != 'number') {
+    if(gridSize == null || gridSize == undefined) {
         // gridSize = prompt('Please enter a valid number value of 2 to 100.');
         console.log(gridSize);
         console.log(typeof(gridSize));
         alert(`Invalid Input: ${gridSize} Please enter a valid number value of 2 to 100.`);
         userGrid();
-    } else if(gridSize == null) {
+    } else if (gridSize < 1 || gridSize > 100 || typeof(gridSize) != 'number') {
+        console.log(gridSize);
+        console.log(typeof(gridSize));
         gridSize = prompt('?????');
+        userGrid();
+    } else if (gridSize == '0') {
     }
     
     if(gridSize>1 || gridSize <100) {
